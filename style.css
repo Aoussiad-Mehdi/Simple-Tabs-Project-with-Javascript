@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 300px;
+}
+h1{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.buttons{
+    margin: 15px 0;
+}
+.buttons button{
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    background: rgb(202, 194, 194);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content img{
+    width: 230px;
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    margin: 0 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.content img:hover{
+    opacity: 0.6;
+}
+@media(max-width : 980px){
+    .content{
+        width: 500px;
+        height: 400px;
+    }
+}
+.modal{
+    width: 100vw;
+    height: 100Vh;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal:hover{
+    cursor: zoom-out;
+}
+.modal img{
+    width: 580px;
+    height: 400px;
+    animation: scale 1s;
+}
+.modal img:hover{
+    cursor: default;
+}
+@keyframes scale{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.modal button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 50%;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 9px 12px;
+}
